@@ -1036,17 +1036,27 @@ design rules under a new name.</description>
 <signal name="NRST">
 <contactref element="U1" pad="4"/>
 <contactref element="J1" pad="5"/>
+<contactref element="C7" pad="1"/>
+<contactref element="S1" pad="3"/>
+<contactref element="S1" pad="4"/>
+<wire x1="-26.924" y1="27.305" x2="-37.68" y2="-38.1" width="0" layer="19" extent="1-1"/>
+<wire x1="-21.336" y1="27.305" x2="-26.924" y2="27.305" width="0" layer="19" extent="1-1"/>
+<wire x1="2.54" y1="43.18" x2="-21.336" y2="27.305" width="0" layer="19" extent="1-1"/>
 <wire x1="9.865" y1="29.55" x2="2.54" y2="43.18" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="BOOT0">
 <contactref element="U1" pad="1"/>
 <contactref element="J1" pad="2"/>
+<contactref element="R1" pad="2"/>
 <wire x1="11.815" y1="29.55" x2="2.54" y2="50.8" width="0" layer="19" extent="1-1"/>
+<wire x1="-29.63" y1="34.29" x2="2.54" y2="50.8" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="OSC_OUT">
 <contactref element="U1" pad="3"/>
 <contactref element="J1" pad="4"/>
+<contactref element="R2" pad="2"/>
 <wire x1="10.515" y1="29.55" x2="2.54" y2="45.72" width="0" layer="19" extent="1-1"/>
+<wire x1="-35.98" y1="-3.81" x2="10.515" y2="29.55" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="A0">
 <contactref element="U1" pad="6"/>
@@ -1084,6 +1094,8 @@ design rules under a new name.</description>
 </signal>
 <signal name="VDD">
 <contactref element="U1" pad="16"/>
+<contactref element="J3" pad="3"/>
+<wire x1="-15.24" y1="35.56" x2="9.215" y2="23.79" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VDDA">
 <contactref element="U1" pad="5"/>
@@ -1132,11 +1144,27 @@ design rules under a new name.</description>
 <signal name="GND">
 <contactref element="U1" pad="15"/>
 <contactref element="J2" pad="8"/>
+<contactref element="J3" pad="1"/>
+<contactref element="C6" pad="2"/>
+<contactref element="C5" pad="2"/>
+<contactref element="S1" pad="1"/>
+<contactref element="S1" pad="2"/>
+<contactref element="C7" pad="2"/>
+<wire x1="-35.98" y1="-34.29" x2="-35.98" y2="-38.1" width="0" layer="19" extent="1-1"/>
+<wire x1="-35.98" y1="-30.48" x2="-35.98" y2="-34.29" width="0" layer="19" extent="1-1"/>
+<wire x1="2.54" y1="7.62" x2="-35.98" y2="-30.48" width="0" layer="19" extent="1-1"/>
 <wire x1="8.565" y1="23.79" x2="2.54" y2="7.62" width="0" layer="19" extent="1-1"/>
+<wire x1="-21.336" y1="31.115" x2="8.565" y2="23.79" width="0" layer="19" extent="1-1"/>
+<wire x1="-20.32" y1="35.56" x2="-21.336" y2="31.115" width="0" layer="19" extent="1-1"/>
+<wire x1="-26.924" y1="31.115" x2="-21.336" y2="31.115" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="OSC_IN">
 <contactref element="U1" pad="2"/>
 <contactref element="J1" pad="3"/>
+<contactref element="Y1" pad="P$2"/>
+<contactref element="C5" pad="1"/>
+<wire x1="-27.25" y1="35.56" x2="-37.68" y2="-30.48" width="0" layer="19" extent="1-1"/>
+<wire x1="2.54" y1="48.26" x2="-27.25" y2="35.56" width="0" layer="19" extent="1-1"/>
 <wire x1="11.165" y1="29.55" x2="2.54" y2="48.26" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VIN_5-30V">
@@ -1144,6 +1172,18 @@ design rules under a new name.</description>
 </signal>
 <signal name="VIN_2.4-3.6V">
 <contactref element="J2" pad="7"/>
+</signal>
+<signal name="N$1">
+<contactref element="R1" pad="1"/>
+<contactref element="J3" pad="2"/>
+<wire x1="-31.33" y1="34.29" x2="-17.78" y2="35.56" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$3">
+<contactref element="Y1" pad="P$1"/>
+<contactref element="R2" pad="1"/>
+<contactref element="C6" pad="1"/>
+<wire x1="-37.68" y1="-3.81" x2="-37.68" y2="-34.29" width="0" layer="19" extent="1-1"/>
+<wire x1="-23.55" y1="35.56" x2="-37.68" y2="-3.81" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
