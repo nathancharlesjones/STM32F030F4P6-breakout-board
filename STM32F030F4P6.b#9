@@ -177,11 +177,11 @@
 V_IN, 5-30V: Connected to input of IC1
 Max GPIO current, single pin: 25 mA
 Max GPIO current, all pins: 80 mA
-USER LED connected to A0 (pin 6). Cut trace btwn J3 pins on TOP of PCB to remove LED from circuit (in-stall jumper to reinsert LED)
+USER LED connected to A0 (pin 6). Cut trace btwn J3 pins on TOP of PCB to remove LED from circuit (install jumper to reinsert LED)
 ------------------------------
-U1: STM32G031J6M6 / SOIC8
-IC1: 1.7-3.6V regulator / SOT89-3 (ex: HT7533-1 from Holtek Semicon)
-J1, 1st 4 terminals (in box): ST-Link connection points
+U1: STM32F030F4P6 / TSSOP-20
+IC1: 2.4-3.6V regulator, &gt;=100mA / SOT89-3 (ex: HT7533-1 from Holtek Semicon)
+J1, pins 15-18 (in box): ST-Link connection points
 J2: J-Link connector (ex: HPH2-A-10-UA-SMT from Adam Tech or 3221-10-0300-00 from CNC Tech)
 C1, C3: 100nF / 1206 | C2: 4.7uF / 1206
 C4: 10 uF / 1206 | R1, R2: 1206 (~100ohms)
@@ -1036,7 +1036,7 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="C1" library="adafruit" package="C0603" value="" x="9.525" y="2.54" smashed="yes">
+<element name="C1" library="adafruit" package="C0603" value="10uF" x="9.525" y="2.54" smashed="yes">
 <attribute name="NAME" x="11.938" y="1.651" size="0.8128" layer="25" rot="R90"/>
 <attribute name="VALUE" x="8.636" y="0.508" size="1.27" layer="27"/>
 </element>
@@ -1079,35 +1079,35 @@ design rules under a new name.</description>
 <attribute name="NAME" x="12.954" y="35.179" size="0.8128" layer="25" rot="R270"/>
 <attribute name="VALUE" x="10.033" y="36.449" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="R1" library="adafruit" package="R0603" value="" x="15.24" y="31.75" smashed="yes">
+<element name="R1" library="adafruit" package="R0603" value="100R" x="15.24" y="31.75" smashed="yes">
 <attribute name="NAME" x="17.526" y="30.861" size="0.8128" layer="25" rot="R90"/>
 <attribute name="VALUE" x="14.351" y="29.718" size="1.27" layer="27"/>
 </element>
-<element name="R2" library="adafruit" package="R0603" value="" x="15.24" y="19.05" smashed="yes" rot="R180">
+<element name="R2" library="adafruit" package="R0603" value="100R" x="15.24" y="19.05" smashed="yes" rot="R180">
 <attribute name="NAME" x="16.764" y="19.304" size="0.8128" layer="25" rot="R270"/>
 <attribute name="VALUE" x="16.129" y="21.082" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="C2" library="adafruit" package="C0603" value="" x="9.525" y="5.715" smashed="yes" rot="R180">
+<element name="C2" library="adafruit" package="C0603" value="4.7uF" x="9.525" y="5.715" smashed="yes" rot="R180">
 <attribute name="NAME" x="10.922" y="5.969" size="0.8128" layer="25" rot="R270"/>
 <attribute name="VALUE" x="10.414" y="7.747" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="C3" library="adafruit" package="C0603" value="" x="6.985" y="22.86" smashed="yes" rot="R180">
+<element name="C3" library="adafruit" package="C0603" value="100nF" x="6.985" y="22.86" smashed="yes" rot="R180">
 <attribute name="NAME" x="8.382" y="23.114" size="0.8128" layer="25" rot="R270"/>
 <attribute name="VALUE" x="7.874" y="24.892" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="C4" library="adafruit" package="C0603" value="" x="8.255" y="34.925" smashed="yes" rot="R180">
+<element name="C4" library="adafruit" package="C0603" value="1uF" x="8.255" y="34.925" smashed="yes" rot="R180">
 <attribute name="NAME" x="6.858" y="34.671" size="0.8128" layer="25" rot="R90"/>
 <attribute name="VALUE" x="9.144" y="36.957" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="C7" library="adafruit" package="C0603" value="" x="15.875" y="44.45" smashed="yes" rot="R90">
+<element name="C7" library="adafruit" package="C0603" value="20pF" x="15.875" y="44.45" smashed="yes" rot="R90">
 <attribute name="NAME" x="15.113" y="42.926" size="0.8128" layer="25" rot="R90"/>
 <attribute name="VALUE" x="17.907" y="43.561" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="C6" library="adafruit" package="C0603" value="" x="12.065" y="44.45" smashed="yes" rot="R90">
+<element name="C6" library="adafruit" package="C0603" value="20pF" x="12.065" y="44.45" smashed="yes" rot="R90">
 <attribute name="NAME" x="11.303" y="42.926" size="0.8128" layer="25" rot="R90"/>
 <attribute name="VALUE" x="14.097" y="43.561" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="C8" library="adafruit" package="C0603" value="" x="10.795" y="22.86" smashed="yes" rot="R90">
+<element name="C8" library="adafruit" package="C0603" value="100nF" x="10.795" y="22.86" smashed="yes" rot="R90">
 <attribute name="NAME" x="11.049" y="21.463" size="0.8128" layer="25" rot="R180"/>
 <attribute name="VALUE" x="12.827" y="21.971" size="1.27" layer="27" rot="R90"/>
 </element>
@@ -1122,7 +1122,7 @@ design rules under a new name.</description>
 <element name="J4" library="SparkFun-Connectors" package="2X5-PTH-1.27MM" value="CORTEX_DEBUG_MINIMUM_PTH" x="11.43" y="12.065" smashed="yes">
 <attribute name="NAME" x="16.8402" y="14.6304" size="0.8128" layer="25" font="vector"/>
 </element>
-<element name="C5" library="adafruit" package="C0603" value="" x="8.255" y="37.465" smashed="yes" rot="R180">
+<element name="C5" library="adafruit" package="C0603" value="10nF" x="8.255" y="37.465" smashed="yes" rot="R180">
 <attribute name="NAME" x="6.858" y="36.576" size="0.8128" layer="25" rot="R90"/>
 <attribute name="VALUE" x="9.144" y="39.497" size="1.27" layer="27" rot="R180"/>
 </element>
@@ -1130,7 +1130,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="17.653" y="21.59" size="0.8128" layer="25" font="vector" rot="R90"/>
 <attribute name="VALUE" x="17.272" y="20.955" size="0.6096" layer="27" font="vector" ratio="20" rot="R90"/>
 </element>
-<element name="R5" library="adafruit" package="R0603" value="" x="7.62" y="48.26" smashed="yes">
+<element name="R5" library="adafruit" package="R0603" value="0R" x="7.62" y="48.26" smashed="yes">
 <attribute name="NAME" x="6.096" y="49.149" size="0.8128" layer="25"/>
 <attribute name="VALUE" x="6.731" y="46.228" size="1.27" layer="27"/>
 </element>

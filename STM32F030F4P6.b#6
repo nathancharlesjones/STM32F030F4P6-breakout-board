@@ -173,22 +173,43 @@
 <wire x1="19.05" y1="0" x2="19.05" y2="50.8" width="0" layer="20"/>
 <wire x1="19.05" y1="50.8" x2="0" y2="50.8" width="0" layer="20"/>
 <wire x1="0" y1="50.8" x2="0" y2="0" width="0" layer="20"/>
-<text x="24.765" y="5.715" size="0.8128" layer="25">V_IN, 2.4-3.6V: Connected thru D1 to V_DD; MCU damage may occur if &gt;4V applied to this pin.
-V_IN, 5-30V: Connected to input of IC1
-Max GPIO current, single pin: 25 mA
-Max GPIO current, all pins: 80 mA
-USER LED connected to A0 (pin 6). Cut trace btwn J3 pins on TOP of PCB to remove LED from circuit (install jumper to reinsert LED)
-------------------------------
-U1: STM32F030F4P6 / TSSOP-20
-IC1: 2.4-3.6V regulator, &gt;=100mA / SOT89-3 (ex: HT7533-1 from Holtek Semicon)
-J1, pins 15-18 (in box): ST-Link connection points
-J2: J-Link connector (ex: HPH2-A-10-UA-SMT from Adam Tech or 3221-10-0300-00 from CNC Tech)
-C1, C3: 100nF / 1206 | C2: 4.7uF / 1206
-C4: 10 uF / 1206 | R1, R2: 1206 (~100ohms)
-S1: SPST-NO / 5.1mmx5.1mm (ex: TS-1187A-B-A-B from XKB Enterprises)
-PWR/USER LED: 0805
-D1, D2: Shottky diode | DO-214AC
-FMI: github.com/nathancharlesjones/Embedded-for-Everyone/wiki</text>
+<text x="18.415" y="46.99" size="0.8128" layer="26" rot="MR0" align="top-left">VIN, 2.4-3.6V: MCU damage
+   may occur if &gt;4V
+Max current, ea pin: 25 mA
+Mx current, all pins: 80 mA
+USER LED on A0 (pin 6); Cut
+   trace btwn J3 on TOP of
+   PCB to remove LED (in-
+   stall jumper to reinsert)
+--------------------
+U1: STM32F030F4P6
+IC1: 2.4-3.6V regulator,
+   &gt;=100mA / SOT-89-3
+   (ex: LCSC part# C14289)
+Y1: 8MHz re         sonator
+   / 5x     3.2mm (ex: LCSC
+   part# C115962)
+J2: J-Link connector (ex:
+           HPH2-A-10-UA
+           from Adam Tech or
+           3220-10 -0100
+           -00 from CNC Tech)
+All footprints below 0603
+   unless noted.
+C1: 10uF        | C2: 4.7uF
+C3, C8: 100nF | C4: 1uF
+C6, C7: 20pF   | C5: 10nF
+R5: 0R (pulls BOOT0 to 
+   GND if J2 is not used)
+R3: 1k
+R4: 10k
+R1, R2: ~100ohms
+S1: SPST-     NO / 5.1mmx
+   5.1mm (ex: LCSC part#
+   C318884)
+LED1, LED2: 0603
+D1, D2: Shottky / SOD-123
+D3: Shottky / DO-214AC</text>
 <wire x1="17.78" y1="14.605" x2="17.78" y2="9.525" width="0.1524" layer="51"/>
 <wire x1="17.78" y1="9.525" x2="5.08" y2="9.525" width="0.1524" layer="51"/>
 <wire x1="5.08" y1="9.525" x2="5.08" y2="14.605" width="0.1524" layer="51"/>
@@ -223,6 +244,7 @@ FMI: github.com/nathancharlesjones/Embedded-for-Everyone/wiki</text>
 -3.6V</text>
 <text x="3.81" y="1.27" size="0.8128" layer="25">VIN: 5-
 30V</text>
+<text x="0.635" y="0.635" size="0.8128" layer="26" rot="MR90">FMI: github.com/nathancharlesjones/Embedded-for-Everyone/wiki</text>
 </plain>
 <libraries>
 <library name="adafruit">

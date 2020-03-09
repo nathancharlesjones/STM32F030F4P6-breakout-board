@@ -194,8 +194,8 @@ J2: J-Link connector (ex:
            from Adam Tech or
            3220-10 -0100
            -00 from CNC Tech)
-All footprints below 0603
-   unless noted.
+All footprints other parts
+   0603 unless noted.
 C1: 10uF        | C2: 4.7uF
 C3, C8: 100nF | C4: 1uF
 C6, C7: 20pF   | C5: 10nF
@@ -203,14 +203,13 @@ R5: 0R (pulls BOOT0 to
    GND if J2 is not used)
 R3: 1k
 
-R4: 10k
-R1, R2: ~100ohms
+R1, R2: ~100R | R4: 10k
 S1: SPST-     NO / 5.1mmx
    5.1mm (ex: LCSC part#
    C318884)
-LED1, LED2: 0603
 D1, D2: Shottky / SOD-123
-D3: Shottky / DO-214AC</text>
+D3: Shottky / DO-214AC
+   (short if VDDA = VDD)</text>
 <wire x1="17.78" y1="14.605" x2="17.78" y2="9.525" width="0.1524" layer="51"/>
 <wire x1="17.78" y1="9.525" x2="5.08" y2="9.525" width="0.1524" layer="51"/>
 <wire x1="5.08" y1="9.525" x2="5.08" y2="14.605" width="0.1524" layer="51"/>
@@ -259,6 +258,7 @@ D3: Shottky / DO-214AC</text>
 <wire x1="8.89" y1="15.24" x2="8.89" y2="17.145" width="0.1524" layer="21"/>
 <wire x1="8.89" y1="17.145" x2="7.62" y2="18.415" width="0.1524" layer="21"/>
 <wire x1="8.89" y1="18.415" x2="8.89" y2="20.32" width="0.1524" layer="21"/>
+<wire x1="15.24" y1="24.765" x2="15.24" y2="22.225" width="0.1524" layer="21"/>
 </plain>
 <libraries>
 <library name="adafruit">
