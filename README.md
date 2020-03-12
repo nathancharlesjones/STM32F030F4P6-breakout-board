@@ -1,37 +1,100 @@
 # STM32F030F4P6 Breakout Board
 ![](https://github.com/nathancharlesjones/STM32F030F4P6-breakout-board/blob/master/STM32F030F4P6_PCB.png)
 
-## STM32F030F4P6 specifications
+# How to order
+1. Download or clone this repository.
+2. Choose which components you want to include on your breakout board. If it's not one of the prepared arrangements below (Minimum, Standard, or Full), edit the bill of materials ("bom") and assembly files to include only those components that you want. The easiest way to do this is probably to start with the "Full" lists and simply delete the rows of the components you don't want to include.
+3. Follow [these instructions for ordering an assembled PCB from JLCPCB or MakerFabs](https://github.com/nathancharlesjones/Embedded-for-Everyone/wiki/3.-Building-a-circuit-on-a-PCB-and-connecting-it-to-the-rest-of-the-embedded-device#ordering-an-assembled-pcb).
+
+# STM32F030F4P6 specifications
 |Processor|Core Size|Speed|Connectivity|Peripherals|I/O|Program memory size|RAM size|Data converters|
 |---|---|---|---|---|---|---|---|---|
 |ARM Cortex-M0|32-bit|48 MHz|I2C, SPI, UART/USART|DMA, POR, PWM, WDT|15|16 kB|4 kB|ADC: 11x 12-bit|
 
-## Schematic
+# Schematic
 ![](https://github.com/nathancharlesjones/STM32F030F4P6-breakout-board/blob/master/STM32F030F4P6_Schematic.png)
 
 The schematic for this breakout board includes 8 modules or sections:
 1. MCU
    - The MCU itself and the 0.1" pin header to which most of the MCU pins are connected (U1 and J1).
 2. Power 
-   - Power regulator, filtering, and LED indicator (IC1, D1, D2, C1, C2, C3, LED1, and R1).
+   - Power regulator, power filtering capacitors, and an LED indicator (IC1, D1, D2, C1, C2, C3, LED1, and R1).
    - Only C2 and C3 are technically required for MCU operation. If you decide to only include those two components, don't forget to bridge the pads of D1.
    - If IC1 is used, D1 and D2 are strongly recommended, though not technically required. D1 and D2 allow for the MCU to be powered from both the VIN_2.4-3.6V and VIN_5-30V pins at the same time without them damaging each other.
 3. Reset
    - The reset button and smoothing capacitor (S1 and C8).
 4. BOOT0
-   - BOOT0 selection (J2, R4, and R5): Selects which part of the MCU's memory is run at start-up (see [AN4325, Getting started with STM32F030xx and STM32F070xx series hardware development](https://www.st.com/content/ccc/resource/technical/document/application_note/91/66/2d/8c/f9/b5/47/55/DM00089834.pdf/files/DM00089834.pdf/jcr:content/translations/en.DM00089834.pdf) for more details).
-   - If you intend to use this feature, leave R5 open.
-   - If you don't intend to use this feature, use a 0 ohm resistor for R5 to pull BOOT0 to ground.
-5. External oscillator (Y1, C6, C7, and R3):
-6. Analog voltage reference (D3, C4, and C5):
-7. User LED (LED2, R2, and J3):
+   - Selection pin header, current-limiting resistor, and pull-down resistor (J2, R4, and R5)
+   - BOOT0 selects which part of the MCU's memory is run at start-up (see [AN4325, Getting started with STM32F030xx and STM32F070xx series hardware development](https://www.st.com/content/ccc/resource/technical/document/application_note/91/66/2d/8c/f9/b5/47/55/DM00089834.pdf/files/DM00089834.pdf/jcr:content/translations/en.DM00089834.pdf) for more details).
+   - If you **DO** intend to use this feature, leave R5 open.
+   - If you **DON'T** intend to use this feature, use a 0 ohm resistor for R5 (or simply short the pads together) to pull BOOT0 to ground.
+5. External oscillator
+   - Crystal oscillator, load capacitors, and feedback resistor (Y1, C6, C7, and R3)
+   - An external crystal oscillator will have higher accuracy than the internal clock, which improves the accuracy of the internal timers and may be necessary for applications such as high-speed UART.
+6. Analog voltage reference (VDDA)
+   - Diode and power filtering capacitors (D3, C4, and C5)
+   - Useful when you want to run the MCU at a lower voltage than what you want your analog voltage reference to be.
+   - VDDA **MUST BE** higher than or equal to VDD (hence the diode; it ensures VDDA is at least equal to VDD during power-up/power-down).
+   - If you **DON'T** intend to have a separate analog reference voltage, you can leave C4 and C5 off and replace D3 with a 0 ohm resistor (or simply short the pads together). If you do that, be careful to not to to power the MCU from the VDDA pin in addition to either of the VIN pins. If the power supply voltage on the VIN pins exceeds that of the power supply on the VDDA pin, then the VIN power supply may backpower the VDDA power supply and damage it.
+7. User LED
+   - LED, current-limiting resistor, and option jumper (LED2, R2, and J3)
+   - J3 is used to optionally remove the LED from the circuit, should you wish to not have the LED connected to its GPIO.
+   - To remove LED2 from the circuit, cut the trace between the terminals of J3 on TOP of the PCB (where its marked on the silkscreen).
+   - To reinsert LED2, place a pin header and jumper in J3. The jumper now controls whether LED2 is included in the circuit or not.
 8. J-Link connector (J4)
 
-### Minimum components
+## Minimum components
+- Cost: Approximately $2.60 on JLCPCB (in quantities of 10)
+- The minimum components required for the MCU to operate plus a reset button, power LED, and user LED.
+- Includes:
+   - STM32F030F4P6 (U1)
+   - Power filtering capacitors (C2, C3)
+   - Reset circuit (C8, S1)
+   - Power LED (LED1, R1)
+   - User LED (LED2, R2)
+   - BOOT0 current-limiting resistor (R4)
+- User must short the pads of D3 and (separately) the pads of R5.
+- Constraints:
+   - Analog reference voltage (VDDA) is equal to the power supply voltage (VDDA)
+   - Power supply voltage must be 2.4-3.6V
+   - BOOT0 fixed at 0 (unless a logical 1 is present on the BOOT0 pin on J1)
+   - No external oscillator
 
+## Standard components
+- Cost: Approximately $3.00 on JLCPCB (in quantities of 10)
+- The components most likely to be needed for a typical application.
+- Includes:
+   - STM32F030F4P6 (U1)
+   - Power regulator, power filtering capacitors, and blocking diodes (IC1, C1, C2, C3, D1, D2)
+   - Reset circuit (C8, S1)
+   - Power LED (LED1, R1)
+   - User LED (LED2, R2)
+   - BOOT0 current-limiting resistor and pull-down resistor (R4, R5)
+   - External oscillator (Y1, C6, C7, R3)
+   - Shorting resistor across D3
+- Power supply can be 2.4-3.6V (on VIN_2.4-3.6V) or 5-30V (on VIN_5-30V)
+- User doesn't have to short any pads together (all accomplished with two 0 ohm resistors, R5 and "D3")
+- Constraints:
+   - Analog reference voltage (VDDA) is equal to the power supply voltage (VDDA)
+   - BOOT0 fixed at 0 (unless a logical 1 is present on the BOOT0 pin on J1)
 
-### Standard components
+## Full components
+- Cost: Approximately $3.00 on JLCPCB (in quantities of 10)
+- Includes all components on the breakout board:
+   - STM32F030F4P6 (U1)
+   - Power regulator, power filtering capacitors, and blocking diodes (IC1, C1, C2, C3, D1, D2)
+   - Reset circuit (C8, S1)
+   - Power LED (LED1, R1)
+   - User LED (LED2, R2)
+   - BOOT0 current-limiting resistor (R4), **NO** shorting resistor
+   - External oscillator (Y1, C6, C7, R3)
+   - Analog voltage reference diode and power filtering capacitors (D3, C4, C5)
+- Power supply can be 2.4-3.6V (on VIN_2.4-3.6V) or 5-30V (on VIN_5-30V)
+- User must populate J2 with a pin header and jumper in order to select the proper BOOT0 configuration
+- Board may, but is not required to, run a separate power supply voltage and analog reference voltage.
 
-### Full components
+# PCB Silkscreen
 
-## How to order
+# References
+- [AN4325, Getting started with STM32F030xx and STM32F070xx series hardware development](https://www.st.com/content/ccc/resource/technical/document/application_note/91/66/2d/8c/f9/b5/47/55/DM00089834.pdf/files/DM00089834.pdf/jcr:content/translations/en.DM00089834.pdf)
+- 
