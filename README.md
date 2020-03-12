@@ -94,26 +94,26 @@ The schematic for this breakout board includes 8 modules or sections:
 - Board may, but is not required to, run a separate power supply voltage and analog reference voltage.
 
 # PCB Silkscreen Text
-- VIN, 2.4-3.6V: MCU damage may occur if >4V
-- Max current, ea pin: 25 mA
-- Mx current, all pins: 80 mA
-- USER LED on A0 (pin 6); Cut trace btwn J3 on TOP of PCB to remove LED (in-stall jumper to reinsert)
---------------------
-- U1: STM32F030F4P6
-- IC1: 2.4-3.6V regulator, >=100mA / SOT-89-3 (ex: LCSC part# C14289)
-- Y1: 8MHz resonator / 5x3.2mm (ex: LCSC part# C115962)
-- J2: J-Link connector (ex: HPH2-A-10-UA from Adam Tech or 3220-10 -0100-00 from CNC Tech)
-- All footprints other parts 0603 unless noted.
-- C1: 10uF        | C2: 4.7uF
-- C3, C8: 100nF   | C4: 1uF
-- C6, C7: 20pF    | C5: 10nF
-- R5: 0R (pulls BOOT0 to GND if J2 is not used)
-- R3: 1k
-- R1, R2: ~100R   | R4: 10k
-- S1: SPST-NO / 5.1mmx5.1mm (ex: LCSC part# C318884)
-- D1, D2: Shottky / SOD-123
-- D3: Shottky / DO-214AC (short if VDDA = VDD)
-- FMI: github.com/nathancharlesjones/Embedded-for-Everyone/wiki
+> VIN, 2.4-3.6V: MCU damage may occur if >4V
+> Max current, ea pin: 25 mA
+> Mx current, all pins: 80 mA
+> USER LED on A0 (pin 6); Cut trace btwn J3 on TOP of PCB to remove LED (in-stall jumper to reinsert)
+>--------------------
+> U1: STM32F030F4P6
+> IC1: 2.4-3.6V regulator, >=100mA / SOT-89-3 (ex: LCSC part# C14289)
+> Y1: 8MHz resonator / 5x3.2mm (ex: LCSC part# C115962)
+> J2: J-Link connector (ex: HPH2-A-10-UA from Adam Tech or 3220-10 -0100-00 from CNC Tech)
+> All footprints other parts 0603 unless noted.
+> C1: 10uF        | C2: 4.7uF
+> C3, C8: 100nF   | C4: 1uF
+> C6, C7: 20pF    | C5: 10nF
+> R5: 0R (pulls BOOT0 to GND if J2 is not used)
+> R3: 1k
+> R1, R2: ~100R   | R4: 10k
+> S1: SPST-NO / 5.1mmx5.1mm (ex: LCSC part# C318884)
+> D1, D2: Shottky / SOD-123
+> D3: Shottky / DO-214AC (short if VDDA = VDD)
+> FMI: github.com/nathancharlesjones/Embedded-for-Everyone/wiki
 
 # References
 - [STM32F030F4 product page](https://www.st.com/content/st_com/en/products/microcontrollers-microprocessors/stm32-32-bit-arm-cortex-mcus/stm32-mainstream-mcus/stm32f0-series/stm32f0x0-value-line/stm32f030f4.html)
