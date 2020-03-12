@@ -7,7 +7,7 @@ Image
 |STM32F030F4P6|ARM Cortex-M0|32-bit|48 MHz|I2C, SPI, UART/USART|DMA, POR, PWM, WDT|15|16 kB|4 kB|2.4-3.6V|ADC: 11x 12-bit|
 
 ## Schematic
-Image
+![](https://github.com/nathancharlesjones/STM32F030F4P6-breakout-board/blob/master/STM32F030F4P6.png)
 
 The schematic for this breakout board includes 8 modules or sections:
 1. The MCU itself and the 0.1" pin header to which most of the MCU pins are connected (U1 and J1).
