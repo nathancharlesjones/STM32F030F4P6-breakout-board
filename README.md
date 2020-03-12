@@ -1,5 +1,5 @@
 # STM32F030F4P6 Breakout Board
-Image
+![](https://github.com/nathancharlesjones/STM32F030F4P6-breakout-board/blob/master/STM32F030F4P6_PCB.png)
 
 ## STM32F030F4P6 specifications
 |Processor|Core Size|Speed|Connectivity|Peripherals|I/O|Program memory size|RAM size|Data converters|
@@ -7,7 +7,7 @@ Image
 |ARM Cortex-M0|32-bit|48 MHz|I2C, SPI, UART/USART|DMA, POR, PWM, WDT|15|16 kB|4 kB|ADC: 11x 12-bit|
 
 ## Schematic
-![](https://github.com/nathancharlesjones/STM32F030F4P6-breakout-board/blob/master/STM32F030F4P6.png)
+![](https://github.com/nathancharlesjones/STM32F030F4P6-breakout-board/blob/master/STM32F030F4P6_Schematic.png)
 
 The schematic for this breakout board includes 8 modules or sections:
 1. MCU
