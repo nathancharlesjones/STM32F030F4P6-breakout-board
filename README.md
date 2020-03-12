@@ -94,10 +94,10 @@ The schematic for this breakout board includes 8 modules or sections:
 - Board may, but is not required to, run a separate power supply voltage and analog reference voltage.
 
 # PCB Silkscreen Text
-> VIN, 2.4-3.6V: MCU damage may occur if >4V
-> Max current, ea pin: 25 mA
-> Mx current, all pins: 80 mA
-> USER LED on A0 (pin 6); Cut trace btwn J3 on TOP of PCB to remove LED (in-stall jumper to reinsert)
+> - VIN, 2.4-3.6V: MCU damage may occur if >4V
+> - Max current, ea pin: 25 mA
+> - Mx current, all pins: 80 mA
+> - USER LED on A0 (pin 6); Cut trace btwn J3 on TOP of PCB to remove LED (in-stall jumper to reinsert)
 >--------------------
 > U1: STM32F030F4P6
 > IC1: 2.4-3.6V regulator, >=100mA / SOT-89-3 (ex: LCSC part# C14289)
