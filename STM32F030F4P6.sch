@@ -12659,7 +12659,9 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/22049b.pdf</description>
 <part name="R5" library="adafruit" deviceset="R-US_" device="R0603" value="0R"/>
 <part name="D3" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="DIODE-" device="DO-214AC" package3d_urn="urn:adsk.eagle:package:43416/2"/>
 <part name="IC1" library="linear" library_urn="urn:adsk.eagle:library:262" deviceset="MCP1703*" device="MB" package3d_urn="urn:adsk.eagle:package:16478/2" technology="33"/>
-<part name="FRAME2" library="SparkFun-Aesthetics" deviceset="FRAME-LETTER" device="NO_PACKAGE"/>
+<part name="FRAME2" library="SparkFun-Aesthetics" deviceset="FRAME-LETTER" device="NO_PACKAGE">
+<attribute name="DESIGNER" value="Nathan Jones"/>
+</part>
 <part name="J1" library="SparkFun-Connectors" deviceset="CONN_19" device=""/>
 </parts>
 <sheets>

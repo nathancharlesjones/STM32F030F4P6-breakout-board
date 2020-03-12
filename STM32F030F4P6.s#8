@@ -12711,9 +12711,9 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/22049b.pdf</description>
 <attribute name="NAME" x="212.09" y="123.4186" size="1.778" layer="95"/>
 <attribute name="VALUE" x="212.09" y="118.618" size="1.778" layer="96"/>
 </instance>
-<instance part="R4" gate="G$1" x="220.98" y="96.52" smashed="yes">
-<attribute name="NAME" x="217.17" y="98.0186" size="1.778" layer="95"/>
-<attribute name="VALUE" x="217.17" y="93.218" size="1.778" layer="96"/>
+<instance part="R4" gate="G$1" x="208.28" y="96.52" smashed="yes">
+<attribute name="NAME" x="204.47" y="98.0186" size="1.778" layer="95"/>
+<attribute name="VALUE" x="204.47" y="93.218" size="1.778" layer="96"/>
 </instance>
 <instance part="C2" gate="G$1" x="195.58" y="132.08" smashed="yes">
 <attribute name="NAME" x="196.596" y="132.715" size="1.778" layer="95"/>
@@ -12739,9 +12739,9 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/22049b.pdf</description>
 <attribute name="NAME" x="112.776" y="145.415" size="1.778" layer="95"/>
 <attribute name="VALUE" x="112.776" y="140.589" size="1.778" layer="96"/>
 </instance>
-<instance part="LED2" gate="G$1" x="205.74" y="96.52" smashed="yes" rot="MR270">
-<attribute name="NAME" x="210.312" y="92.964" size="1.778" layer="95" rot="MR0"/>
-<attribute name="VALUE" x="210.312" y="90.805" size="1.778" layer="96" rot="MR0"/>
+<instance part="LED2" gate="G$1" x="193.04" y="96.52" smashed="yes" rot="MR270">
+<attribute name="NAME" x="197.612" y="92.964" size="1.778" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="197.612" y="90.805" size="1.778" layer="96" rot="MR0"/>
 </instance>
 <instance part="D2" gate="G$1" x="187.96" y="137.16" smashed="yes">
 <attribute name="NAME" x="185.42" y="139.7" size="1.27" layer="95"/>
@@ -12776,9 +12776,9 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/22049b.pdf</description>
 <instance part="GND7" gate="1" x="231.14" y="88.9" smashed="yes">
 <attribute name="VALUE" x="231.14" y="88.646" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="J5" gate="G$1" x="198.12" y="88.9" smashed="yes" rot="R90">
-<attribute name="VALUE" x="202.946" y="86.36" size="1.778" layer="96" font="vector" rot="R90"/>
-<attribute name="NAME" x="192.532" y="86.36" size="1.778" layer="95" font="vector" rot="R90"/>
+<instance part="J5" gate="G$1" x="223.52" y="88.9" smashed="yes" rot="R90">
+<attribute name="VALUE" x="228.346" y="86.36" size="1.778" layer="96" font="vector" rot="R90"/>
+<attribute name="NAME" x="217.932" y="86.36" size="1.778" layer="95" font="vector" rot="R90"/>
 </instance>
 <instance part="R6" gate="G$1" x="81.28" y="137.16" smashed="yes">
 <attribute name="NAME" x="77.47" y="138.6586" size="1.778" layer="95"/>
@@ -12870,20 +12870,14 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/22049b.pdf</description>
 <label x="20.32" y="55.88" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="LED2" gate="G$1" pin="A"/>
-<pinref part="J5" gate="G$1" pin="1"/>
-<wire x1="203.2" y1="96.52" x2="198.12" y2="96.52" width="0.1524" layer="91"/>
-<pinref part="J5" gate="G$1" pin="2"/>
-<wire x1="198.12" y1="96.52" x2="195.58" y2="96.52" width="0.1524" layer="91"/>
-<junction x="198.12" y="96.52"/>
-<wire x1="195.58" y1="96.52" x2="193.04" y2="96.52" width="0.1524" layer="91"/>
-<junction x="195.58" y="96.52"/>
-<label x="190.5" y="96.52" size="1.778" layer="95"/>
-</segment>
-<segment>
 <label x="35.56" y="139.7" size="1.778" layer="95"/>
 <pinref part="J1" gate="G$1" pin="3"/>
 <wire x1="38.1" y1="139.7" x2="35.56" y2="139.7" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="LED2" gate="G$1" pin="A"/>
+<wire x1="190.5" y1="96.52" x2="187.96" y2="96.52" width="0.1524" layer="91"/>
+<label x="187.96" y="96.52" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="A1" class="0">
@@ -13182,10 +13176,16 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/22049b.pdf</description>
 <junction x="167.64" y="96.52"/>
 </segment>
 <segment>
-<pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="226.06" y1="96.52" x2="231.14" y2="96.52" width="0.1524" layer="91"/>
 <pinref part="GND7" gate="1" pin="GND"/>
 <wire x1="231.14" y1="96.52" x2="231.14" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="R4" gate="G$1" pin="2"/>
+<pinref part="J5" gate="G$1" pin="2"/>
+<wire x1="213.36" y1="96.52" x2="220.98" y2="96.52" width="0.1524" layer="91"/>
+<pinref part="J5" gate="G$1" pin="1"/>
+<wire x1="220.98" y1="96.52" x2="223.52" y2="96.52" width="0.1524" layer="91"/>
+<junction x="220.98" y="96.52"/>
+<wire x1="223.52" y1="96.52" x2="231.14" y2="96.52" width="0.1524" layer="91"/>
+<junction x="223.52" y="96.52"/>
 </segment>
 <segment>
 <label x="35.56" y="104.14" size="1.778" layer="95"/>
@@ -13283,7 +13283,7 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/22049b.pdf</description>
 <segment>
 <pinref part="LED2" gate="G$1" pin="C"/>
 <pinref part="R4" gate="G$1" pin="1"/>
-<wire x1="210.82" y1="96.52" x2="215.9" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="96.52" x2="203.2" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

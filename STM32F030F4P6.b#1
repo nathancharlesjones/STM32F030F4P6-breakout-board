@@ -260,6 +260,8 @@ D3: Shottky / DO-214AC
 <wire x1="8.89" y1="18.415" x2="8.89" y2="20.32" width="0.1524" layer="21"/>
 <wire x1="15.24" y1="24.765" x2="15.24" y2="22.225" width="0.1524" layer="21"/>
 <text x="16.51" y="25.4" size="0.8128" layer="25">(A0)</text>
+<text x="13.335" y="27.305" size="0.8128" layer="25">+      -</text>
+<text x="13.335" y="29.845" size="0.8128" layer="25">+      -</text>
 </plain>
 <libraries>
 <library name="adafruit">
