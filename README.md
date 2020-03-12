@@ -25,7 +25,8 @@ The schematic for this breakout board includes 8 modules or sections:
    - The reset button and smoothing capacitor (S1 and C8).
 4. BOOT0
    - Selection pin header, current-limiting resistor, and pull-down resistor (J2, R4, and R5)
-   - BOOT0 selects which part of the MCU's memory is run at start-up (see [AN4325, Getting started with STM32F030xx and STM32F070xx series hardware development](https://www.st.com/content/ccc/resource/technical/document/application_note/91/66/2d/8c/f9/b5/47/55/DM00089834.pdf/files/DM00089834.pdf/jcr:content/translations/en.DM00089834.pdf) for more details).
+   - BOOT0 selects which part of the MCU's memory is run at start-up (see [AN4325, Getting started with STM32F030xx and STM32F070xx series
+ hardware development](https://www.st.com/content/ccc/resource/technical/document/application_note/91/66/2d/8c/f9/b5/47/55/DM00089834.pdf/files/DM00089834.pdf/jcr:content/translations/en.DM00089834.pdf) for more details).
    - If you **DO** intend to use this feature, leave R5 open.
    - If you **DON'T** intend to use this feature, use a 0 ohm resistor for R5 (or simply short the pads together) to pull BOOT0 to ground.
 5. External oscillator
@@ -44,7 +45,7 @@ The schematic for this breakout board includes 8 modules or sections:
 8. J-Link connector (J4)
 
 ## Minimum components
-- Cost: Approximately $2.60 on JLCPCB (in quantities of 10)
+- Cost: Approximately $2.60 per board on JLCPCB (in quantities of 10)
 - The minimum components required for the MCU to operate plus a reset button, power LED, and user LED.
 - Includes:
    - STM32F030F4P6 (U1)
@@ -61,7 +62,7 @@ The schematic for this breakout board includes 8 modules or sections:
    - No external oscillator
 
 ## Standard components
-- Cost: Approximately $3.00 on JLCPCB (in quantities of 10)
+- Cost: Approximately $3.00 per board on JLCPCB (in quantities of 10)
 - The components most likely to be needed for a typical application.
 - Includes:
    - STM32F030F4P6 (U1)
@@ -79,7 +80,7 @@ The schematic for this breakout board includes 8 modules or sections:
    - BOOT0 fixed at 0 (unless a logical 1 is present on the BOOT0 pin on J1)
 
 ## Full components
-- Cost: Approximately $3.00 on JLCPCB (in quantities of 10)
+- Cost: Approximately $3.00 per board on JLCPCB (in quantities of 10)
 - Includes all components on the breakout board:
    - STM32F030F4P6 (U1)
    - Power regulator, power filtering capacitors, and blocking diodes (IC1, C1, C2, C3, D1, D2)
@@ -117,6 +118,7 @@ The schematic for this breakout board includes 8 modules or sections:
 
 # References
 - [STM32F030F4 product page](https://www.st.com/content/st_com/en/products/microcontrollers-microprocessors/stm32-32-bit-arm-cortex-mcus/stm32-mainstream-mcus/stm32f0-series/stm32f0x0-value-line/stm32f030f4.html)
-- [AN4325, Getting started with STM32F030xx and STM32F070xx series hardware development](https://www.st.com/content/ccc/resource/technical/document/application_note/91/66/2d/8c/f9/b5/47/55/DM00089834.pdf/files/DM00089834.pdf/jcr:content/translations/en.DM00089834.pdf)
+- [AN4325, Getting started with STM32F030xx and STM32F070xx series
+ hardware development](https://www.st.com/content/ccc/resource/technical/document/application_note/91/66/2d/8c/f9/b5/47/55/DM00089834.pdf/files/DM00089834.pdf/jcr:content/translations/en.DM00089834.pdf)
 - [DS9773](https://www.st.com/resource/en/datasheet/stm32f030f4.pdf), STM32F030F4P6 datasheet
 - [RM0360](https://www.st.com/resource/en/reference_manual/dm00091010.pdf), STM32F030F4P6 reference manual
