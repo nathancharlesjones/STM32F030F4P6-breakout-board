@@ -59,7 +59,7 @@ The schematic for this breakout board includes 8 modules or sections:
    - Diode and power filtering capacitors (D3, C4, and C5)
    - Useful when you want to run the MCU at a lower voltage than what you want your analog voltage reference to be.
    - VDDA **MUST BE** higher than or equal to VDD (hence the diode; it ensures VDDA is at least equal to VDD during power-up/power-down).
-   - If you **DON'T** intend to have a separate analog reference voltage, you can leave C4 and C5 off and replace D3 with a 0 ohm resistor (or simply short the pads together). If you do that, be careful to not to to power the MCU from the VDDA pin in addition to either of the VIN pins. If the power supply voltage on the VIN pins exceeds that of the power supply on the VDDA pin, then the VIN power supply may backpower the VDDA power supply and damage it.
+   - If you **DON'T** intend to have a separate analog reference voltage, you can leave C4 and C5 off and replace D3 with a 0 ohm resistor (or simply short the pads together). If you do that, be careful not to power the MCU from the VDDA pin in addition to either of the VIN pins. If the power supply voltage on the VIN pins exceeds that of the power supply on the VDDA pin, then the VIN power supply may backpower the VDDA power supply and damage it.
 7. User LED
    - LED, current-limiting resistor, and option jumper (LED2, R2, and J3)
    - J3 is used to optionally remove the LED from the circuit, should you wish to not have the LED connected to its GPIO.
