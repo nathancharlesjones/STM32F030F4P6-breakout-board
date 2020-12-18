@@ -11,6 +11,29 @@
 |---|---|---|---|---|---|---|---|---|
 |ARM Cortex-M0|32-bit|48 MHz|I2C, SPI, UART/USART|DMA, POR, PWM, WDT|15|16 kB|4 kB|ADC: 11x 12-bit|
 
+# Pin-compatibility
+
+**WARNING**: I have not checked each of these parts and cannot guarantee that they will work with this board without modifications. They are listed here merely to bring to the reader's attention that there _may_ be pin-compatible STM32 MCUs which _could_ work with this board in the event that the STM32F030F4P6 is not exactly the MCU they would like to use. If you are interested in using one of these other MCUs, I would recommend that you find the appropriate datasheet and hardware development guide from ST Microelectronics to ensure that this board will meet the requirements of any new MCU.
+
+Using the STM32CubeMX tool, it appears to me that, as of this update (18 Dec 2020), this board is also exactly pin-compatible with the MCUs below (the STM32F030F4Px is shown in the first row for comparison).
+
+|Part No.Processor|Core Size|Speed|Connectivity|Peripherals|I/O|Program memory size|RAM size|Data converters|
+|---|---|---|---|---|---|---|---|---|---|
+|STM32F030F4Px|ARM Cortex-M0|32-bit|48 MHz|I2C, SPI, UART/USART|DMA, POR, PWM, WDT|15|16 kB|4 kB|ADC: 11x 12-bit|
+|STM32F031F4Px|ARM Cortex-M0|32-bit|48 MHz|I2C, SPI, UART/USART, IrDA, LINbus|DMA, I2S, POR, PWM, WDT|15|16 kB|4 kB|ADC: 12x 12-bit|
+|STM32F031F6Px|ARM Cortex-M0|32-bit|48 MHz|I2C, SPI, UART/USART, IrDA, LINbus|DMA, I2S, POR, PWM, WDT|15|32 kB|4 kB|ADC: 12x 12-bit|
+|STM32F038F6Px|ARM Cortex-M0|32-bit|48 MHz|I2C, SPI, UART/USART, IrDA, LINbus|DMA, I2S, POR, PWM, WDT|14|32 kB|4 kB|ADC: 9x 12-bit|
+|STM32F070F6Px|ARM Cortex-M0|32-bit|48 MHz|I2C, SPI, UART/USART, USB|DMA, POR, PWM, WDT|15|32 kB|6 kB|ADC: 11x 12-bit|
+
+The following MCUs are pin-compatible for the purposes of this breakout board (meaning the power, programming, and clock pins line up), but may map their peripherals to different pins than the STM32F030F4P6. The STM32F030F4P6 is shown in the first row (again) for comparison.
+
+|Part No.Processor|Core Size|Speed|Connectivity|Peripherals|I/O|Program memory size|RAM size|EEPROM size|Data converters|
+|---|---|---|---|---|---|---|---|---|---|---|
+|STM32F030F4Px|ARM Cortex-M0|32-bit|48 MHz|I2C, SPI, UART/USART|DMA, POR, PWM, WDT|15|16 kB|4 kB|N/A|ADC: 11x 12-bit|
+|STM32L031F4Px|ARM Cortex-M0+|32-bit|32 MHz|I2C, SPI, UART/USART, IrDA, LINbus|DMA, POR, PWM, WDT, Brown-out detect/reset|15|16 kB|8 kB|1 kB|ADC: 10x 12-bit|
+|STM32L031F6Px|ARM Cortex-M0+|32-bit|32 MHz|I2C, SPI, UART/USART, IrDA, LINbus|DMA, POR, PWM, WDT, Brown-out detect/reset|15|32 kB|8 kB|1 kB|ADC: 10x 12-bit|
+|STM32L041F6Px|ARM Cortex-M0+|32-bit|32 MHz|I2C, SPI, UART/USART, IrDA, LINbus|DMA, POR, PWM, WDT, Brown-out detect/reset|15|32 kB|8 kB|1 kB|ADC: 10x 12-bit|
+
 # Schematic
 ![](https://github.com/nathancharlesjones/STM32F030F4P6-breakout-board/blob/master/STM32F030F4P6_Schematic.png)
 
