@@ -17,7 +17,7 @@
 
 Using the STM32CubeMX tool, it appears to me that, as of this update (18 Dec 2020), this board is also exactly pin-compatible with the MCUs below (the STM32F030F4Px is shown in the first row for comparison).
 
-|Part No.Processor|Core Size|Speed|Connectivity|Peripherals|I/O|Program memory size|RAM size|Data converters|
+|Part No.|Processor|Core Size|Speed|Connectivity|Peripherals|I/O|Program memory size|RAM size|Data converters|
 |---|---|---|---|---|---|---|---|---|---|
 |STM32F030F4Px|ARM Cortex-M0|32-bit|48 MHz|I2C, SPI, UART/USART|DMA, POR, PWM, WDT|15|16 kB|4 kB|ADC: 11x 12-bit|
 |STM32F031F4Px|ARM Cortex-M0|32-bit|48 MHz|I2C, SPI, UART/USART, IrDA, LINbus|DMA, I2S, POR, PWM, WDT|15|16 kB|4 kB|ADC: 12x 12-bit|
@@ -27,7 +27,7 @@ Using the STM32CubeMX tool, it appears to me that, as of this update (18 Dec 202
 
 The following MCUs are pin-compatible for the purposes of this breakout board (meaning the power, programming, and clock pins line up), but may map their peripherals to different pins than the STM32F030F4P6. The STM32F030F4P6 is shown in the first row (again) for comparison.
 
-|Part No.Processor|Core Size|Speed|Connectivity|Peripherals|I/O|Program memory size|RAM size|EEPROM size|Data converters|
+|Part No.|Processor|Core Size|Speed|Connectivity|Peripherals|I/O|Program memory size|RAM size|EEPROM size|Data converters|
 |---|---|---|---|---|---|---|---|---|---|---|
 |STM32F030F4Px|ARM Cortex-M0|32-bit|48 MHz|I2C, SPI, UART/USART|DMA, POR, PWM, WDT|15|16 kB|4 kB|N/A|ADC: 11x 12-bit|
 |STM32L031F4Px|ARM Cortex-M0+|32-bit|32 MHz|I2C, SPI, UART/USART, IrDA, LINbus|DMA, POR, PWM, WDT, Brown-out detect/reset|15|16 kB|8 kB|1 kB|ADC: 10x 12-bit|
