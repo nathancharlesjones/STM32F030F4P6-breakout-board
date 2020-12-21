@@ -82,7 +82,7 @@ The schematic for this breakout board includes 8 modules or sections:
    - Power LED (LED1, R1)
    - User LED (LED2, R2)
    - BOOT0 current-limiting resistor (R4)
-- User must short the pads of D3 and (separately) the pads of R5.
+- User must short the pads of (separately) D1, D3, and R5.
 - Constraints:
    - Analog reference voltage (VDDA) is equal to the power supply voltage (VDDA)
    - Power supply voltage must be 2.4-3.6V
